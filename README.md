@@ -166,3 +166,60 @@ if you have ideas or suggestions!
 ## Contributors ✨
 
 Thanks goes to the wonderful people listed in [AUTHORS.md](./AUTHORS.md) 🎉
+
+## 笔记
+
+### primitive_types2.rs
+  
+is_alphabetic
+is_numeric 
+两个字符上的API，判断字符类型的内容是字母表还是数字。
+存在而这都不是的情况：option + 任意字母键
+
+```rust
+let your_character = '1'; // Finish this line like the example! What's your favorite character?
+                          // Try a letter, try a number, try a special character, try a character
+                          // from a different language than your own, try an emoji!
+if your_character.is_alphabetic() {
+    println!("Alphabetical!");
+} else if your_character.is_numeric() {****
+    println!("Numerical!");
+} else {
+    println!("Neither alphabetic nor numeric!");
+}
+```
+
+### primitive_type3.rs
+
+如何快速创建一个数组，语法忘记了。
+
+1. 数组需要给定类型和大小
+2. 类型是统一的
+3. 数组使用 [] 包裹
+4. 数组元素相同时的快速创建方式：`let a: [i32; 500] = [0; 500];`
+5. 数组切片创建: &a[1..4]; (primitive_type4.rs)
+
+## primitive_type6.rs
+
+- 元组元素读取以及定义
+
+```rust
+let numbers = (1, 2, 3);
+// Replace below ??? with the tuple indexing syntax.
+let second = numbers.1;
+```
+## vecs1.rs
+
+向量的几种定义方式
+- Vec::new()
+- vec![10, 20, 30]
+- vec.get(2)
+  - 向量获取元素的两种方式以及区别
+- vec.push(32)
+- 通过枚举存储多种类型数据
+
+
+
+
+
+
