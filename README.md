@@ -218,7 +218,36 @@ let second = numbers.1;
 - vec.push(32)
 - 通过枚举存储多种类型数据
 
+## vecs2.rs
 
+此处用到了闭包，闭包在Rust中的概念有些遗忘。
+- 可以捕获当前环境中的变量。
+
+- Vector 遍历方法
+
+```rust
+for i in v.iter_mut() {
+    *i *= 2;
+}
+```
+遍历的到的是引用，如果需要改变原数，需要解引用
+
+```rust
+v.iter().map(|num| {
+    // TODO: Do the same thing as above - but instead of mutating the
+    // Vec, you can just return the new number!
+    num + 1
+})
+.collect()
+```
+
+[collect 消费迭代器](https://kaisery.github.io/trpl-zh-cn/ch13-02-iterators.html#%E4%BA%A7%E7%94%9F%E5%85%B6%E4%BB%96%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95)
+
+类似JS函数式编程中的延迟执行，iter 以及 map 创建的迭代器，如果不去通过 collect 消费，那么其中的内容就永远不会执行。
+
+## move_semantics1.rs
+
+移动语意：
 
 
 
